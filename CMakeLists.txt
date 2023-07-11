@@ -9,4 +9,8 @@ project(fq VERSION ${PROJECT_VERSION})
 enable_testing()
 
 add_subdirectory(src)
-add_subdirectory(test)
+
+if (BUILD_TESTING)
+	add_subdirectory(tests)
+endif()
+
