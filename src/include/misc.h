@@ -3,22 +3,25 @@
 
 #include "gf.h"
 
-inline int bit_length(unsigned int a)
+namespace fq
 {
-	int length = 0;
-
-	while (a > 0)
+	inline int bit_length(unsigned int a)
 	{
-		length++;
-		a >>= 1;
+		int length = 0;
+
+		while (a > 0)
+		{
+			length++;
+			a >>= 1;
+		}
+
+		return length;
 	}
 
-	return length;
-}
-
-inline int degree(unsigned int a)
-{
-	return bit_length(a) - 1;
+	inline int degree(unsigned int a)
+	{
+		return bit_length(a) - 1;
+	}
 }
 
 #endif

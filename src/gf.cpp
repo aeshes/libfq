@@ -40,8 +40,8 @@ namespace fq
 		while (exp != 0)
 		{
 			if (exp & 1)
-				result = gf_mul(result, a, mod);
-			a = gf_mul(a, a, mod);
+				result = mul(result, a, mod);
+			a = mul(a, a, mod);
 			exp >>= 1;
 		}
 
